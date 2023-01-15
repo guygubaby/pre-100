@@ -6,10 +6,9 @@ export const tsup: Options = {
   clean: true,
   format: ['cjs', 'esm'],
   dts: true,
-  minify: true,
   entryPoints: [
-    'src/100.ts',
-    'src/extra-100.ts',
+    'src/index.ts',
+    'src/extra.ts',
   ],
   external: [],
 }

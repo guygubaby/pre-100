@@ -17,12 +17,12 @@
   "keywords": [],
   "sideEffects": false,
   "exports": {
-    ".": "./dist/100.css",
-    "./100.css": "./dist/100.css",
+    ".": "./dist/index.css",
+    "./100.css": "./dist/index.css",
     "./extra.css": "./dist/extra.css"
   },
-  "main": "dist/100.css",
-  "module": "dist/100.css",
+  "main": "dist/index.css",
+  "module": "dist/index.css",
   "types": "dist/index.d.ts",
   "typesVersions": {
     "*": {
