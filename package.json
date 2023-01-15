@@ -19,7 +19,7 @@
   "exports": {
     ".": "./dist/100.css",
     "./100.css": "./dist/100.css",
-    "./extra-100.css": "./dist/extra-100.css"
+    "./extra.css": "./dist/extra.css"
   },
   "main": "dist/100.css",
   "module": "dist/100.css",
