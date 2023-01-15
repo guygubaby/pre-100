@@ -19,6 +19,13 @@ import 'pre-100' // just 100 bytes css preflights
 import 'pre-100/extra.css' // extra 100 bytes css preflights
 ```
 
+### Or use from CDN
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/pre-100@latest/dist/index.css" />
+<link rel="stylesheet" href="https://unpkg.com/pre-100@latest/dist/extra.css" />
+```
+
 ## Features
 
 ### 1. 100 bytes css preflights
