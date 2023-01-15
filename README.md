@@ -54,6 +54,11 @@ p,ul,ol {
 }
 ```
 
+## Useful links:
+
+- [sakura](https://github.com/oxalorg/sakura)
+- [water.css](https://github.com/kognise/water.css)
+
 ## License
 
 [MIT](./LICENSE) License © 2023 [guygubaby](https://github.com/guygubaby)
