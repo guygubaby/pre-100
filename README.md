@@ -1,6 +1,12 @@
 # pre-100
 
+100 Bytes of CSS to look great everywhere
+
 [![NPM version](https://img.shields.io/npm/v/pre-100?color=a1b858&label=)](https://www.npmjs.com/package/pre-100)
+
+## Brief intro
+
+For more [100 Bytes of CSS to look great everywhere](https://www.swyx.io/css-100-bytes)
 
 ## Get Started
 
@@ -15,7 +21,7 @@ import 'pre-100/extra.css' // extra 100 bytes css preflights
 
 ## Features
 
-### 100 bytes css preflights
+### 1. 100 bytes css preflights
 
 ```css
 html {
@@ -27,7 +33,7 @@ html {
 }
 ```
 
-### 100 bytes css preflights with extra
+### 2. 100 bytes css preflights with extra
 
 ```css
 h1,h2,h3,h4,h5,h6 {
