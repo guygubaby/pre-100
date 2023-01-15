@@ -8,8 +8,8 @@ export const tsup: Options = {
   dts: true,
   minify: true,
   entryPoints: [
-    'src/index.ts',
-    'src/extra.ts',
+    'src/100.ts',
+    'src/extra-100.ts',
   ],
   external: [],
 }

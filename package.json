@@ -17,15 +17,15 @@
   "keywords": [],
   "sideEffects": false,
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
+    "./100.css": {
+      "types": "./dist/100.d.ts",
+      "require": "./dist/100.js",
+      "import": "./dist/100.mjs"
     },
-    "./extra": {
-      "types": "./dist/extra.d.ts",
-      "require": "./dist/extra.js",
-      "import": "./dist/extra.mjs"
+    "./extra-100.css": {
+      "types": "./dist/extra-100.d.ts",
+      "require": "./dist/extra-100.js",
+      "import": "./dist/extra-100.mjs"
     }
   },
   "main": "dist/index.js",
@@ -46,8 +46,7 @@
     "prepublishOnly": "pnpm build",
     "start": "tsx src/index.ts",
     "dev": "pnpm build -- --watch",
-    "build": "tsup && pnpm post-build",
-    "post-build": "tsx scripts/post-build.ts",
+    "build": "tsup",
     "release": "bumpp --commit --push --tag",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"
