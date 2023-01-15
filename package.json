@@ -17,19 +17,12 @@
   "keywords": [],
   "sideEffects": false,
   "exports": {
-    "./100.css": {
-      "types": "./dist/100.d.ts",
-      "require": "./dist/100.js",
-      "import": "./dist/100.mjs"
-    },
-    "./extra-100.css": {
-      "types": "./dist/extra-100.d.ts",
-      "require": "./dist/extra-100.js",
-      "import": "./dist/extra-100.mjs"
-    }
+    ".": "./dist/100.css",
+    "./100.css": "./dist/100.css",
+    "./extra-100.css": "./dist/extra-100.css"
   },
-  "main": "dist/index.js",
-  "module": "dist/index.mjs",
+  "main": "dist/100.css",
+  "module": "dist/100.css",
   "types": "dist/index.d.ts",
   "typesVersions": {
     "*": {
