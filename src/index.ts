@@ -1,1 +1,1 @@
-export const one = 1
+import './100.css'

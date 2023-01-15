@@ -1,18 +1,18 @@
 {
-  "name": "ts-stater",
+  "name": "pre-100",
   "version": "0.0.0",
-  "packageManager": "pnpm@7.18.2",
+  "packageManager": "pnpm@7.25.0",
   "description": "",
   "author": "guygubaby <guygubaby@gmail.com>",
   "license": "MIT",
   "funding": "https://github.com/sponsors/guygubaby",
-  "homepage": "https://github.com/guygubaby/ts-stater#readme",
+  "homepage": "https://github.com/guygubaby/pre-100#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/guygubaby/ts-stater.git"
+    "url": "git+https://github.com/guygubaby/pre-100.git"
   },
   "bugs": {
-    "url": "https://github.com/guygubaby/ts-stater/issues"
+    "url": "https://github.com/guygubaby/pre-100/issues"
   },
   "keywords": [],
   "sideEffects": false,
@@ -21,6 +21,11 @@
       "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
       "import": "./dist/index.mjs"
+    },
+    "./extra": {
+      "types": "./dist/extra.d.ts",
+      "require": "./dist/extra.js",
+      "import": "./dist/extra.mjs"
     }
   },
   "main": "dist/index.js",
@@ -41,10 +46,10 @@
     "prepublishOnly": "pnpm build",
     "start": "tsx src/index.ts",
     "dev": "pnpm build -- --watch",
-    "build": "tsup",
+    "build": "tsup && pnpm post-build",
+    "post-build": "tsx scripts/post-build.ts",
     "release": "bumpp --commit --push --tag",
     "lint": "eslint .",
-    "test": "vitest",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
