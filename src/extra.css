@@ -7,3 +7,9 @@ p,ul,ol {
   color: #1d1d1d;
   font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
+
+@media (prefers-color-scheme: dark) {
+  p,ul,ol {
+    color: #e5e5e5;
+  }
+}
