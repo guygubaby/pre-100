@@ -1,6 +1,6 @@
 {
   "name": "pre-100",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "packageManager": "pnpm@7.25.0",
   "description": "100 Bytes of CSS to look great everywhere",
   "author": "guygubaby <guygubaby@gmail.com>",
