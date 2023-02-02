@@ -1,6 +1,6 @@
 {
   "name": "pre-100",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "packageManager": "pnpm@7.25.0",
   "description": "100 Bytes of CSS to look great everywhere",
   "author": "guygubaby <guygubaby@gmail.com>",
@@ -14,7 +14,9 @@
   "bugs": {
     "url": "https://github.com/guygubaby/pre-100/issues"
   },
-  "keywords": ["css preflight"],
+  "keywords": [
+    "css preflight"
+  ],
   "sideEffects": false,
   "exports": {
     ".": "./dist/index.css",
