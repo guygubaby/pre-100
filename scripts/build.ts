@@ -2,7 +2,7 @@ import { mkdir, readFile, rm, writeFile } from 'node:fs/promises'
 import { existsSync } from 'node:fs'
 import { basename, resolve } from 'node:path'
 import { transform as cssTransformer } from 'lightningcss'
-import { cyan, green, yellow } from 'picocolors'
+import { cyan, green, magenta, yellow } from 'picocolors'
 
 const cwd = process.cwd()
 
@@ -12,6 +12,12 @@ const preflight = async (outDir: string) => {
   if (existsSync(destDir))
     await rm(destDir, { recursive: true })
   await mkdir(destDir)
+}
+
+const calcFileSize = (file: string) => {
+  const size = Buffer.byteLength(file, 'utf-8')
+  const kb = (size / 1024).toFixed(2)
+  return `${kb} KB`
 }
 
 interface Options {
@@ -33,16 +39,20 @@ const build = async (options?: Options) => {
 
   const entries = Array.isArray(_entries) ? _entries : [_entries]
 
-  const transform = (code: string, id: string) => {
-    console.log(yellow('⚡'), 'Transforming', cyan(basename(id)))
+  const maxLen = Math.max(...entries.map(e => basename(e).length))
 
+  const transform = (code: string, id: string) => {
     const { code: css } = cssTransformer({
       code: Buffer.from(code),
       filename: id,
       minify,
     })
 
-    return css.toString()
+    const res = css.toString()
+
+    console.log(yellow('⚡'), magenta(basename(id).padEnd(maxLen + 2, ' ')), cyan(calcFileSize(res)))
+
+    return res
   }
 
   for (const entry of entries) {
@@ -57,10 +67,11 @@ const build = async (options?: Options) => {
   const end = Date.now()
 
   console.log('')
-  console.log(green('✔'), ' Done in', cyan(`${end - start}ms`))
+  console.log(green('✔'), ' Build success in', cyan(`${end - start}ms`))
+  console.log('')
 }
 
 build({
-  entries: ['./src/index.css', './src/extra.css'],
+  entries: ['./src/index.css', './src/extra.css', './src/100.css'],
   minify: true,
 }).catch(console.error)

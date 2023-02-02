@@ -15,7 +15,8 @@ pnpm i pre-100
 ```
 
 ```ts
-import 'pre-100' // just 100 bytes css preflights
+import 'pre-100' // all css preflights
+import 'pre-100/100.css' // just 100 bytes css preflights
 import 'pre-100/extra.css' // extra 100 bytes css preflights
 ```
 
@@ -23,6 +24,7 @@ import 'pre-100/extra.css' // extra 100 bytes css preflights
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/pre-100@latest/dist/index.css" />
+<link rel="stylesheet" href="https://unpkg.com/pre-100@latest/dist/100.css" />
 <link rel="stylesheet" href="https://unpkg.com/pre-100@latest/dist/extra.css" />
 ```
 

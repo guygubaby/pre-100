@@ -1,0 +1,14 @@
+html {
+  max-width: 70ch;
+  padding: 3rem 1rem;
+  margin: auto;
+  line-height: 1.75;
+  font-size: 1.25rem;
+  
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
