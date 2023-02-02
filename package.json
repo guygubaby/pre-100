@@ -14,7 +14,7 @@
   "bugs": {
     "url": "https://github.com/guygubaby/pre-100/issues"
   },
-  "keywords": [],
+  "keywords": ["css preflight"],
   "sideEffects": false,
   "exports": {
     ".": "./dist/index.css",
@@ -23,23 +23,12 @@
   },
   "main": "dist/index.css",
   "module": "dist/index.css",
-  "types": "dist/index.d.ts",
-  "typesVersions": {
-    "*": {
-      "*": [
-        "./dist/*",
-        "./dist/index.d.ts"
-      ]
-    }
-  },
   "files": [
     "dist"
   ],
   "scripts": {
     "prepublishOnly": "pnpm build",
-    "start": "tsx src/index.ts",
-    "dev": "pnpm build -- --watch",
-    "build": "tsup",
+    "build": "tsx ./scripts/build.ts",
     "release": "bumpp --commit --push --tag && pnpm publish --access public",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"
@@ -49,7 +38,8 @@
     "@types/node": "^18.11.18",
     "bumpp": "^8.2.1",
     "eslint": "^8.32.0",
-    "tsup": "^6.5.0",
+    "lightningcss": "^1.18.0",
+    "picocolors": "^1.0.0",
     "tsx": "^3.12.2",
     "typescript": "^4.9.4",
     "vitest": "^0.27.1"
