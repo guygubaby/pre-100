@@ -1,6 +1,6 @@
 {
   "name": "pre-100",
-  "version": "0.3.2",
+  "version": "0.3.3",
   "packageManager": "pnpm@7.25.0",
   "description": "100 Bytes of CSS to look great everywhere",
   "author": "guygubaby <guygubaby@gmail.com>",
@@ -31,12 +31,13 @@
   "scripts": {
     "prepublishOnly": "pnpm build",
     "dev": "tsx --watch ./scripts/build.ts",
-    "build": "tsx ./scripts/build.ts",
+    "build": "cssup",
     "release": "bumpp --commit --push --tag && pnpm publish --access public",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "@bryce-loskie/cssup": "^0.1.0",
     "@bryce-loskie/eslint-config": "^2.0.12",
     "@types/node": "^18.11.18",
     "bumpp": "^8.2.1",
